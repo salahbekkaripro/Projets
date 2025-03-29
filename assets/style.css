@@ -1,0 +1,373 @@
+/* Styles généraux */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #222; /* Couleur sombre pour une ambiance oppressante */
+    color: #ddd; /* Texte gris clair pour le contraste */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Titres */
+h2 {
+    color: #ff4500; /* Orange agressif pour rappeler l'urgence et la prison */
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Styles des boutons */
+button, a {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #444; /* Boutons en gris acier */
+    border: 2px solid #ff4500; /* Bordures orange style alerte */
+    border-radius: 3px; /* Angles plus durs */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease-in-out;
+}
+
+button:hover, a:hover {
+    background-color: #ff4500;
+    transform: scale(1.05); /* Léger effet pour donner un impact */
+}
+
+/* Styles des formulaires */
+form {
+    background: #333; /* Fond foncé pour donner un aspect austère */
+    color: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    width: 350px;
+    box-shadow: 2px 2px 10px rgba(255, 69, 0, 0.5); /* Ombre orange sinistre */
+    border-radius: 5px;
+    border: 2px solid #ff4500;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #666; /* Bordures métalliques */
+    background: #222; /* Fond sombre */
+    color: #ddd;
+    border-radius: 3px;
+}
+
+/* Styles des tableaux */
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: #222;
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.5);
+}
+
+table, th, td {
+    border: 1px solid #666; /* Bordures épaisses pour un style rigide */
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #ff4500; /* Couleur d’alerte */
+    color: white;
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #333;
+    color: #ddd;
+}
+
+/* Barre de navigation façon "grillage" */
+.navbar {
+    background: repeating-linear-gradient(
+        -45deg,
+        #111,
+        #111 10px,
+        #333 10px,
+        #333 20px
+    ); /* Effet grillage métallique */
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 4px solid #ff4500;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar a:hover {
+    background-color: #ff4500;
+    border-radius: 5px;
+}
+
+/* Notifications rouges style "Alerte" */
+.notif-badge {
+    background-color: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 4px 8px;
+    margin-left: 5px;
+    box-shadow: 0 0 10px red;
+}
+
+/* Conteneur de tableau de bord */
+.dashboard-container {
+    background: #222;
+    padding: 20px;
+    border: 2px solid #ff4500;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.7);
+}
+
+/* Styles des stats */
+.stat-box {
+    display: inline-block;
+    background: #333;
+    border: 2px solid #ff4500;
+    padding: 15px;
+    width: 200px;
+    margin: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Conteneur du formulaire */
+form {
+    background: #222;
+    padding: 25px;
+    margin: 20px auto;
+    width: 400px; /* Ajustement pour un meilleur centrage */
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.5);
+    border-radius: 5px;
+    border: 2px solid #ff4500;
+    text-align: left;
+}
+
+/* Labels des champs */
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #ff4500; /* Texte orange style carcéral */
+}
+
+/* Champs de saisie et sélection */
+form input, form select, form textarea {
+    width: 100%; /* Assure que tous les champs prennent toute la largeur */
+    max-width: 350px; /* Garde une largeur cohérente pour tout */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #ff4500;
+    background: #333;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    display: block; /* S'assure que tous les champs sont alignés */
+}
+
+/* Effet au focus */
+form input:focus, form select:focus, form textarea:focus {
+    border-color: red;
+    outline: none;
+    box-shadow: 0px 0px 5px red;
+}
+
+/* Style du bouton */
+form button {
+    width: 100%; /* Fait en sorte que le bouton ait la même taille que les champs */
+    max-width: 350px; /* Uniformisé avec les champs */
+    padding: 12px;
+    background: #ff4500;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: red;
+}
+
+/* Centrage du bouton */
+form .btn-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* Style général de la table emploi du temps */
+.emploi-du-temps {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #222; /* Fond sombre */
+    border: 2px solid #ff4500; /* Bordure orange style alerte */
+    box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.7);
+}
+
+/* Bordures et style des cellules */
+.emploi-du-temps th, .emploi-du-temps td {
+    border: 1px solid #666; /* Bordures épaisses pour un effet de grille carcérale */
+    padding: 10px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+/* Ligne d'en-tête avec les jours */
+.emploi-du-temps th {
+    background: repeating-linear-gradient(
+        -45deg,
+        #111,
+        #111 10px,
+        #333 10px,
+        #333 20px
+    ); /* Effet grillage métallique */
+    color: #ff4500; /* Orange alerte */
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 15px;
+}
+
+/* Colonne des heures */
+.heure {
+    background-color: #444; /* Fond sombre métallique */
+    color: #ff4500; /* Orange style alerte */
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 80px;
+}
+
+
+/* Effet survol des cours */
+.cours:hover {
+    transform: scale(1.05);
+    background-color: darkred; /* Effet de survol */}
+
+/* Différentes couleurs de cours pour donner un effet de classification carcérale */
+.cours:nth-child(odd) { background-color: #800000; } /* Rouge sombre pour discipline */
+.cours:nth-child(even) { background-color: #4B5320; } /* Vert militaire pour rigueur */
+.cours:nth-child(3n) { background-color: #1a1a1a; } /* Noir pour une apparence brute */
+.cours:nth-child(4n) { background-color: #8b0000; } /* Rouge foncé pour sanction */
+
+/* Animation pour donner un effet de surveillance */
+@keyframes surveillance {
+    0% { box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.5); }
+    50% { box-shadow: 0px 0px 20px rgba(255, 69, 0, 0.9); }
+    100% { box-shadow: 0px 0px 10px rgba(255, 69, 0, 0.5); }
+}
+
+/* Appliquer l'effet de surveillance à certaines cases */
+.cours:nth-child(odd):hover {
+    animation: surveillance 1s infinite alternate;
+}
+
+
+    .emploi-du-temps {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed; /* Empêche l'étirement du tableau */
+    }
+
+    th, td {
+        border: 1px solid white;
+        padding: 5px;
+        text-align: center;
+        overflow: hidden;
+        white-space: nowrap; /* Empêche le texte de s'étaler */
+    }
+    
+    .heure {
+        font-weight: bold;
+        width: 60px; /* Fixe la largeur des heures */
+    }
+
+.cours-placeholder {
+    background-color: red; /* Même couleur pour les cellules fusionnées */
+    border: 1px solid black;
+}
+
+table, tr, td {
+    overflow: visible;
+}
+
+.cours {
+    position: relative;
+    align-items: center;  /* Centre verticalement */
+    justify-content: center;  /* Centre horizontalement */
+    text-align: center;
+    overflow: visible; 
+    font-size: calc(1vw + 0.5vh); /* Taille dynamique du texte */
+    word-wrap: break-word; /* Coupe proprement les longs mots */
+    padding: 5px; /* Un peu d'espace autour du texte */
+}
+.cours span {
+    display: block;
+    width: 90%; /* Garde le texte bien contenu */
+    white-space: normal; /* Permet les retours à la ligne */
+}
+.event-time {
+    display: none !important; /* Cache par défaut */
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    z-index: 99999 !important;
+}
+
+.cours {
+    position: relative;
+}
+
+.cours:hover .event-time {
+    display: block !important;
+}
+
+
+
+.flash-message {
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.flash-message.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.flash-message.error {
+    background-color: #f44336;
+    color: white;
+}
+
+.flash-message.info {
+    background-color: #2196F3;
+    color: white;
+}
